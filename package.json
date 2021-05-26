@@ -1,0 +1,34 @@
+{
+  "name": "jackal-postman-tools",
+  "version": "1.7.0",
+  "description": "Postman Collections manipulation tools",
+  "main": "bin/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ile2807/postman-collection-tools.git"
+  },
+  "author": "Ilija Trajkoski",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ile2807/postman-collection-tools/issues"
+  },
+  "homepage": "https://github.com/ile2807/postman-collection-tools#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "clear": "^0.1.0",
+    "minimist": "^1.2.5",
+    "jackal-postman-core": "^1.0.1"
+  },
+  "bin": {
+    "jackal": "./app.js"
+  },
+  "keywords": [
+    "postman",
+    "collection",
+    "tool",
+    "variables"
+  ]
+}
