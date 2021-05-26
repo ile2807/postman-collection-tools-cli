@@ -9,7 +9,7 @@ All merge commands are using ***one output collection from many source collectio
 
 To run the application just execute the application with the correct command line arguments
 
-### As npm module
+### Install and execute
 
 ```bash
 npm i jackal-postman-tools -g
@@ -17,12 +17,12 @@ npm i jackal-postman-tools -g
 jackal [command] -f [source-folder] -s [start-collection] -o [output-collection]
 ```
 
-### As node application from source
+### As node application from git repo
 
 ```bash
-git clone https://github.com/ile2807/postman-collection-tools.git
+git clone https://github.com/ile2807/postman-collection-tools-cli.git
 
-cd postman-collection-tools
+cd postman-collection-tools-cli
 
 node app.js [command] -f [source-folder] -s [start-collection] -o [output-collection]
 ```
@@ -69,11 +69,8 @@ Source collections folder > ./examples
 Start collection to be upgraded > Blank collection
 Target collection > test.json
 Command > merge-requests
----------------------------------------------------------------------
-Processing source file: Sample With variables 2.postman_collection.json
-Processing source file: Sample With variables.postman_collection.json  
 ---------------------------------------------------------------------  
-Merge fiinished successfully
+Done
 ---------------------------------------------------------------------   
 ```
 and the Output collection will be populated with the aggregated variables
