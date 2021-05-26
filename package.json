@@ -19,8 +19,9 @@
   "dependencies": {
     "chalk": "^4.1.1",
     "clear": "^0.1.0",
+    "figlet": "^1.5.0",
     "minimist": "^1.2.5",
-    "jackal-postman-core": "^1.0.1"
+    "jackal-postman": "^1.0.5"
   },
   "bin": {
     "jackal": "./app.js"
