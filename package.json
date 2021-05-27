@@ -1,6 +1,6 @@
 {
   "name": "jackal-postman-tools",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Postman Collections manipulation CLI tool",
   "main": "bin/app.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "clear": "^0.1.0",
     "figlet": "^1.5.0",
     "minimist": "^1.2.5",
-    "jackal-postman": "file:C:/Projects/Git/postman-collection-tools"
+    "jackal-postman": "^1.1.2"
   },
   "bin": {
     "jackal": "./app.js"
