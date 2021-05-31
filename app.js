@@ -1,4 +1,5 @@
-const args = require('minimist')(process.argv.slice(2));
+const parseArgs = require('minimist');
+const args = parseArgs(process.argv.slice(2));
 const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');

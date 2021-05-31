@@ -1,6 +1,6 @@
 {
   "name": "jackal-postman-tools",
-  "version": "1.7.2",
+  "version": "1.7.7",
   "description": "Postman Collections manipulation CLI tool",
   "main": "bin/app.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ile2807/postman-collection-tools-cli.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "author": "Ilija Trajkoski",
   "license": "GPL-3.0-or-later",
@@ -21,7 +24,7 @@
     "clear": "^0.1.0",
     "figlet": "^1.5.0",
     "minimist": "^1.2.5",
-    "jackal-postman": "^1.1.2"
+    "jackal-postman": "^1.1.5"
   },
   "bin": {
     "jackal": "./app.js"

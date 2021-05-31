@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f8de253f-dabc-4374-ab89-de0632072a41",
+		"_postman_id": "d9df1301-201c-407d-b5f0-ab586cadff41",
 		"name": "Smart Tests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -336,6 +336,157 @@
 					],
 					"cookie": [],
 					"body": "{\r\n\t\"id\": \"0001\",\r\n\t\"type\": \"donut\",\r\n\t\"name\": \"Cake\",\r\n\t\"ppu\": 0.55,\r\n\t\"batters\":\r\n\t\t{\r\n\t\t\t\"batter\":\r\n\t\t\t\t[\r\n\t\t\t\t\t{ \"id\": \"1001\", \"type\": \"Regular\" },\r\n\t\t\t\t\t{ \"id\": \"1002\", \"type\": \"Chocolate\" },\r\n\t\t\t\t\t{ \"id\": \"1003\", \"type\": \"Blueberry\" },\r\n\t\t\t\t\t{ \"id\": \"1004\", \"type\": \"Devil's Food\" }\r\n\t\t\t\t]\r\n\t\t},\r\n\t\"topping\":\r\n\t\t[\r\n\t\t\t{ \"id\": \"5001\", \"type\": \"None\" },\r\n\t\t\t{ \"id\": \"5002\", \"type\": \"Glazed\" },\r\n\t\t\t{ \"id\": \"5005\", \"type\": \"Sugar\" },\r\n\t\t\t{ \"id\": \"5007\", \"type\": \"Powdered Sugar\" },\r\n\t\t\t{ \"id\": \"5006\", \"type\": \"Chocolate with Sprinkles\" },\r\n\t\t\t{ \"id\": \"5003\", \"type\": \"Chocolate\" },\r\n\t\t\t{ \"id\": \"5004\", \"type\": \"Maple\" }\r\n\t\t]\r\n}\r\n"
+				}
+			]
+		},
+		{
+			"name": "Xml request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.learningcontainer.com/wp-content/uploads/2020/03/Sample-XML-Files.xml",
+					"protocol": "https",
+					"host": [
+						"www",
+						"learningcontainer",
+						"com"
+					],
+					"path": [
+						"wp-content",
+						"uploads",
+						"2020",
+						"03",
+						"Sample-XML-Files.xml"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Xml request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.learningcontainer.com/wp-content/uploads/2020/03/Sample-XML-Files.xml",
+							"protocol": "https",
+							"host": [
+								"www",
+								"learningcontainer",
+								"com"
+							],
+							"path": [
+								"wp-content",
+								"uploads",
+								"2020",
+								"03",
+								"Sample-XML-Files.xml"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 31 May 2021 08:33:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=2592000"
+						},
+						{
+							"key": "Display",
+							"value": "staticcontent_sol, staticcontent_sol"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"386-5af170df95650-gzip-gzip\""
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Fri, 28 May 2021 04:19:14 GMT"
+						},
+						{
+							"key": "Response",
+							"value": "200"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "X-Forwarded-Proto,Accept-Encoding,User-Agent,Origin"
+						},
+						{
+							"key": "X-Ezoic-Cdn",
+							"value": "Hit ds;dm;641b3de4cac4e87da507a2e69b7b6625;2-257698-0;f656c9a9-36d4-4767-4110-cf843c05aac6"
+						},
+						{
+							"key": "X-Middleton-Display",
+							"value": "staticcontent_sol, staticcontent_sol"
+						},
+						{
+							"key": "X-Middleton-Response",
+							"value": "200"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "HIT"
+						},
+						{
+							"key": "Age",
+							"value": "93"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "0a63276933000090eba092f000000001"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=%2FRTt%2Bt%2BEJes7VaeUdQOUUFBO29glfaO5ahZL9kGmiefM70eLMKr5tEquYWQyeuSg1psxdfiRdXtK5ObtMdOveGMU9vyYu8TFyqNOupWytud8c%2BZZ2pkVw5pquiAvLZ%2BLg5YkQqCNPA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "657edb55192690eb-ZAG"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type='text/xsl'?>\n<CATALOG>\n    <CD>\n        <TITLE>dill diya galla</TITLE>\n        <ARTIST>Arijit singh</ARTIST>\n        <COUNTRY>India</COUNTRY>\n        <COMPANY>tseries</COMPANY>\n        <PRICE>10.90</PRICE>\n        <YEAR>2018</YEAR>\n    </CD>\n    <CD>\n        <TITLE>Saiyara</TITLE>\n        <ARTIST>Atif Aslam</ARTIST>\n        <COUNTRY>Uk</COUNTRY>\n        <COMPANY>Records</COMPANY>\n        <PRICE>9.90</PRICE>\n        <YEAR>2015</YEAR>\n    </CD>\n    <CD>\n        <TITLE>Khairiyat</TITLE>\n        <ARTIST>Sonu nigam</ARTIST>\n        <COUNTRY>india</COUNTRY>\n        <COMPANY>radio</COMPANY>\n        <PRICE>9.90</PRICE>\n        <YEAR>2019</YEAR>\n    </CD>\n    <CD>\n        <TITLE>all is well</TITLE>\n        <ARTIST>Amir Khan</ARTIST>\n        <COUNTRY>pak</COUNTRY>\n        <COMPANY>Virgin records</COMPANY>\n        <PRICE>10.20</PRICE>\n        <YEAR>2012</YEAR>\n    </CD>\n    <CD>\n        <TITLE>rockstar</TITLE>\n        <ARTIST>kk</ARTIST>\n        <COUNTRY>india</COUNTRY>\n        <COMPANY>Eros</COMPANY>\n        <PRICE>9.90</PRICE>\n        <YEAR>2014</YEAR>\n    </CD>\n</CATALOG>"
 				}
 			]
 		}
