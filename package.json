@@ -24,7 +24,7 @@
     "clear": "^0.1.0",
     "figlet": "^1.5.0",
     "minimist": "^1.2.5",
-    "jackal-postman": "^1.1.5"
+    "jackal-postman": "^1.1.7"
   },
   "bin": {
     "jackal": "./app.js"
