@@ -1,7 +1,7 @@
 @startuml
 node Jackal as j #Orange
 title CleanUp, Add Tests, Add Missing variable
-file "Source file (-s)" as sf #94afd1
+file "Start file (-s)" as sf #94afd1
 artifact "Output file (-o)" as o #94afd1
 sf -right-> j
 j -right-> o
