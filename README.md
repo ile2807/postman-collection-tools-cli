@@ -76,6 +76,18 @@ Done
 ```
 and the Output collection will be populated with the aggregated variables
 
+## How does it work
+
+### Merging commands
+Merge commands take initial file (or start with blank if not provided), take the features from the source folder collections or the set of provided collections and insert the features. The altered content is then saved in the output file.
+
+![Using the merge commands](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/ile2807/postman-collection-tools-cli/main/mergeFeatures.iuml)
+
+### Altering commands
+Altering commands take initial file, perform the command and save the altered content in the output file.
+
+![Using the merge commands](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/ile2807/postman-collection-tools-cli/main/otherFeatures.iuml)
+
 ## Parameters
 
 ### Start file `-s`
