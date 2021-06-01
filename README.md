@@ -14,17 +14,17 @@ To run the application just execute the application with the correct command lin
 ```bash
 npm i jackal-postman-tools -g
 
-jackal [command] -f [source-folder] -s [start-collection] -o [output-collection]
+jackal [command] -f [source-folder] -s [start-file] -o [output-collection] -c [source-collections]
 ```
 
-### As node application from git repo
+### As node application from git repository
 
 ```bash
 git clone https://github.com/ile2807/postman-collection-tools-cli.git
 
 cd postman-collection-tools-cli
 
-node app.js [command] -f [source-folder] -s [start-collection] -o [output-collection]
+node app.js [command] -f [source-folder] -s [start-file] -o [output-collection] -c [source-collections]
 ```
 
 ### Help
@@ -66,7 +66,8 @@ jackal mv -f ./examples -s outTemp -o out.json
   \___/   \__,_|  \___| |_|\_\  \__,_| |_|
 
 Source collections folder > ./examples
-Start collection to be upgraded > Blank collection
+Source collections > undefined
+Start file to be upgraded > Blank collection
 Target collection > test.json
 Command > merge-requests
 ---------------------------------------------------------------------  
@@ -75,14 +76,47 @@ Done
 ```
 and the Output collection will be populated with the aggregated variables
 
+## Parameters
+
+### Start file `-s`
+`startFile` is considered any existing postman collection or postman environment file. This will will be the starting point to enhance with Jackal commands
+
+### Source folder `-f`
+`sourceFolder` is a path on a local drive that will be used as a source of collections whos features will be added to the `startFile`, see the commands above for more info. 
+> NOTE: the scanning of files in this folder is ***not recursive***, only the *.json located directly into this folder will be considered for usage.
+
+### Source collections `-c`
+`sourceCollections` is a substitute for `sourceFolder`. It is suppose to be a list of collection files separated with comma (,). If this parameter is present in the function call, the `sourceFolder` value is ignored.
+
+### Output file `-o`
+`outputFile` is a path where we want the resulting collection/environment to be saved by the Jackal. This location should be accessible by the Jackal. This parameter is required in all use cases.
+
+
+## Commands and needed parameters
+
+:question: = Optional
+:heavy_check_mark: = Required
+:x: = Not used
+|Command   |`-s`| `-f` either or `-c`| `-o`|
+|---|---|---|---|
+|mv|:question: Blank collection|:heavy_check_mark:|:heavy_check_mark:|
+|mev|:question: Blank environment|:heavy_check_mark:|:heavy_check_mark:|
+|mr|:question: Blank collection|:heavy_check_mark:|:heavy_check_mark:|
+|mc|:question: Blank collection|:heavy_check_mark:|:heavy_check_mark:|
+|clr|:heavy_check_mark:|:x:|:heavy_check_mark:|
+|amcv|:heavy_check_mark:|:x:|:heavy_check_mark:|
+|t200|:heavy_check_mark:|:x:|:heavy_check_mark:|
+|ts|:heavy_check_mark:|:x:|:heavy_check_mark:|
+
 ## NOTES
-- The application will only append Collection Variables in the Output collection 
-- You can use the Output collection as a Start collection, in this case only the new variables will be added and the Start collection **will be overwritten**
-- Source of Collection Variables/Requests are all the collections located in the Source folder
-- Duplicate (name and value) variables will not be added in the collection multiple times
-- If values are different in two same named variables then both will be added to the Output collection
+- The application will only append features in the `outputFile` 
+- You can use the `outputFile` as a `startFile`, in this case the `startFile` **will be altered and overwritten**
+- Source of Collection Variables/Requests are all the collections (*.json) located in the Source folder **NOT recursive**
+- Duplicate (name and value) items **will not** be added in the `outputFile` multiple times
+- If values are different in two same named items then both will be added to the `outputFile`
 - Empty variables are not added 
-- When using **ts** command, the source collection must have saved responses as [examples](https://learning.postman.com/docs/sending-requests/responses/), otherwise the generation does not work, there is nothing go analyse
+- When using **ts** command, the source collection must have saved responses as [examples](https://learning.postman.com/docs/sending-requests/responses/), otherwise the generation does not work, there is nothing go analyze
 - When using the t* commands, the source collection is not altered in any way other than appending test assertions in the `Test` part of ***requests only***. The assertions are added beside existing `Test` code.
 - This application does not alters source collections, the changes are only streamed to the output collection.
 - The `mev` command works with environment files, both the source and the output files ***are not*** collection files, but [Postman environment files](https://learning.postman.com/docs/sending-requests/managing-environments/)
+- `sourceCollections` is a substitute for `sourceFolder`. The commands that need these values at least one is mandatory (either or). It is useless to specify both, specifying `sourceCollections` overrides the `sourceFolder` value.
