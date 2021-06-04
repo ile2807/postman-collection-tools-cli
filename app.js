@@ -30,7 +30,7 @@ if (args.h || args.help) {
 
 if (command === undefined) help();
 
-if (command.startsWith("t") || command.startsWith("clr") || command.startsWith("amcv")) {
+if (command.startsWith("t") || command.startsWith("cl") || command.startsWith("amcv")) {
     if (!validateParametersSourceFile(sourceFileName, outputFileName)) exit();
 } else {
     if (!validateParametersSourceFolder(collectionsFolder, outputFileName, collectionNamesList)) exit();
