@@ -30,7 +30,7 @@ if (args.h || args.help) {
 
 if (command === undefined) help();
 
-if (command.startsWith("t") || command.startsWith("c") || command.startsWith("a")) {
+if (command.startsWith("t") || command.startsWith("c") || command.startsWith("a") || command.startsWith("e")) {
     if (!validateParametersSourceFile(sourceFileName, outputFileName)) exit();
 } else {
     if (!validateParametersSourceFolder(collectionsFolder, outputFileName, collectionNamesList)) exit();
@@ -47,7 +47,7 @@ jackal.run(command, sourceFileName, collectionsFolder, outputFileName, collectio
     } else {
         console.log("Execution: " + chalk.yellow(executionResult));
     }
-}).catch(err=>console.log(err));
+}).catch(err => console.log(err));
 
 
 

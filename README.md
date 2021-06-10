@@ -48,6 +48,8 @@ jackal -h
 |`clv`          |Remove unused collection variables   |Removes all unused collection variables from the collection. It goes through the whole collection and looks for used variables. Then removes all collection variables that are not referenced anywhere in the collection. With this command, the `sourceFolder` is not used |
 |`arph`|Append request payload hash| Appends code in PreRequest code that hashes the request body with `hashPassword` variable value. This hash is then added to the request as `PayloadHash` header. 
 |`amcv`|Append missing collection variables|Appends missing collection variables that are refferenced in all requests but are not present in the collection. With this command, the -f flag is not used|
+|`emd`|Generate MD document from collection|Creates summary Markdown document from all the collection descriptions. ***This feature does not automatically generate descriptions***.  It only collects descriptions of all elements of the collection and creates one summary Markdown file. With this command, the `sourceFolder` is not used|
+|`epdf`|Generate PDF document from collection|Creates PDF document from all the collection descriptions. ***This feature does not automatically generate descriptions***. It collects descriptions of all elements of the collection and creates one summary PDF document file. With this command, the `sourceFolder` is not used|
 > Commands can be combined by executing them one after the other and using the output collection of the first execution as a source collection of the next exection.
 
 Example:
@@ -123,6 +125,8 @@ Altering commands take initial file, perform the command and save the altered co
 |`amcv`|:heavy_check_mark:|:x:|:heavy_check_mark:|
 |`t200`|:heavy_check_mark:|:x:|:heavy_check_mark:|
 |`ts`|:heavy_check_mark:|:x:|:heavy_check_mark:|
+|`emd`|:heavy_check_mark:|:x:|:heavy_check_mark:|
+|`epdf`|:heavy_check_mark:|:x:|:heavy_check_mark:|
 
 ## NOTES
 - The application will only append features in the `outputFile` 
