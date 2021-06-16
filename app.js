@@ -30,10 +30,10 @@ if (args.h || args.help) {
 
 if (command === undefined) help();
 
-if (command.startsWith("t") || command.startsWith("c") || command.startsWith("a") || command.startsWith("e")) {
-    if (!validateParametersSourceFile(sourceFileName, outputFileName)) exit();
-} else {
+if (command.startsWith("m")) {
     if (!validateParametersSourceFolder(collectionsFolder, outputFileName, collectionNamesList)) exit();
+} else {
+    if (!validateParametersSourceFile(sourceFileName, outputFileName)) exit();
 }
 console.log('Source collections folder > ' + chalk.cyan(collectionsFolder));
 console.log('Source collections > ' + chalk.cyan(collectionNamesList));
