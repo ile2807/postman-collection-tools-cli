@@ -1,6 +1,6 @@
 # Jackal tools
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](ile2807@gmail.com)[![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/ile2807/postman-collection-tools) [![Version](https://img.shields.io/npm/v/jackal-postman)](https://www.npmjs.com/package/jackal-postman-tools) [![Downloads](https://img.shields.io/npm/dt/jackal-postman-tools)](https://www.npmjs.com/package/jackal-postman-tools)
+[![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/ile2807/postman-collection-tools) [![Version](https://img.shields.io/npm/v/jackal-postman)](https://www.npmjs.com/package/jackal-postman-tools) [![Downloads](https://img.shields.io/npm/dt/jackal-postman-tools)](https://www.npmjs.com/package/jackal-postman-tools)
 
 Jackal tools is an utility application that manipulates `Postman collections`.
 
