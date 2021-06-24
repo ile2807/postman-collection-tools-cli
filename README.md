@@ -129,6 +129,7 @@ Altering commands take initial file, perform the command and save the altered co
 |`amcv`|:heavy_check_mark:|:x:|:heavy_check_mark:|
 |`t200`|:heavy_check_mark:|:x:|:heavy_check_mark:|
 |`ts`|:heavy_check_mark:|:x:|:heavy_check_mark:|
+|`ged`|:heavy_check_mark:|:x:|:heavy_check_mark:|
 |`emd`|:heavy_check_mark:|:x:|:heavy_check_mark:|
 |`epdf`|:heavy_check_mark:|:x:|:heavy_check_mark:|
 
