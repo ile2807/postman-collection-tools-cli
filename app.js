@@ -4,7 +4,8 @@ const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
 const { exit } = require('process');
-const { help, line, version } = require('./lib/helper');
+const { help, line, version, exportDescriptionPDF } = require('./lib/helper');
+const { generateOpenApi } = require('./lib/external');
 const { validateParametersSourceFile, validateParametersSourceFolder } = require('./lib/validation');
 const outputFileName = args.o;
 const collectionsFolder = args.f;
@@ -41,13 +42,33 @@ console.log('Start file > ' + chalk.cyan(sourceFileName));
 console.log('Target collection > ' + chalk.cyan(outputFileName));
 console.log('Command > ' + chalk.cyan(command))
 line();
-jackal.run(command, sourceFileName, collectionsFolder, outputFileName, collectionNamesList).then(executionResult => {
-    if (executionResult instanceof Set) {
-        executionResult.forEach(e => console.log(chalk.yellow(e)));
-    } else {
-        console.log("Execution: " + chalk.yellow(executionResult));
-    }
-}).catch(err => console.log(err));
+if (command === "epdf") {
+    exportDescriptionPDF(sourceFileName, outputFileName).then(executionResult => {
+        if (executionResult instanceof Set) {
+            executionResult.forEach(e => console.log(chalk.yellow(e)));
+        } else {
+            console.log("Execution: " + chalk.yellow(executionResult));
+        }
+    }).catch(err => console.log(err));
+} else if (command === "oapi") {
+    generateOpenApi(sourceFileName, outputFileName).then(executionResult => {
+        if (executionResult.startsWith("openapi: 3.0.0")) {
+            console.log("Execution: " + chalk.yellow("OK"));
+        } else {
+            console.log("Execution: " + chalk.red(executionResult));
+        }
+    }).catch(err => console.log(err));
+}
+
+else {
+    jackal.run(command, sourceFileName, collectionsFolder, outputFileName, collectionNamesList).then(executionResult => {
+        if (executionResult instanceof Set) {
+            executionResult.forEach(e => console.log(chalk.yellow(e)));
+        } else {
+            console.log("Execution: " + chalk.yellow(executionResult));
+        }
+    }).catch(err => console.log(err));
+}
 
 
 

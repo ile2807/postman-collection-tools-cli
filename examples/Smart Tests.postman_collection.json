@@ -1,73 +1,98 @@
 {
-	"info": {
-		"_postman_id": "d9df1301-201c-407d-b5f0-ab586cadff41",
-		"name": "Smart Tests",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	"_": {
+		"postman_id": "d9df1301-201c-407d-b5f0-ab586cadff41"
 	},
 	"item": [
 		{
+			"id": "f6c9de61-5215-4e13-84f8-0f61ee55cbbf",
 			"name": "Get all notes",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"description": {
+					"content": "\n## Url\n`GET`  `h://jsonplaceholder/todos/1`\n\n",
+					"type": "text/markdown"
+				},
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/todos/1",
 					"protocol": "https",
+					"path": [
+						"todos",
+						"1"
+					],
 					"host": [
 						"jsonplaceholder",
 						"typicode",
 						"com"
 					],
-					"path": [
-						"todos",
-						"1"
-					]
-				}
+					"query": [],
+					"variable": []
+				},
+				"method": "GET"
 			},
-			"response": []
+			"response": [],
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "04f9d7cf-d95a-4226-b8aa-5a55b0a727b5",
+						"type": "text/javascript",
+						"exec": [
+							"//Begin of auto generated code by Jackal",
+							"pm.test(\"Status code is 200 for request: Get all notes\", function () {pm.response.to.have.status(200);});",
+							"//End of auto generated code by Jackal",
+							"//Begin of auto generated code by Jackal",
+							"pm.test(\"Status code is 200 for request: Get all notes\", function () {pm.response.to.have.status(200);});",
+							"//End of auto generated code by Jackal"
+						]
+					}
+				}
+			]
 		},
 		{
+			"id": "8e98ba36-31f9-4e12-9e63-e005a070fd60",
 			"name": "Get Note 1",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"description": {
+					"content": "\n## Url\n`GET`  `h://jsonplaceholder/todos/1`\n\n",
+					"type": "text/markdown"
+				},
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/todos/1",
 					"protocol": "https",
+					"path": [
+						"todos",
+						"1"
+					],
 					"host": [
 						"jsonplaceholder",
 						"typicode",
 						"com"
 					],
-					"path": [
-						"todos",
-						"1"
-					]
-				}
+					"query": [],
+					"variable": []
+				},
+				"method": "GET"
 			},
 			"response": [
 				{
+					"id": "3b28e213-a79b-4495-bd20-45c25321866b",
 					"name": "Notes",
 					"originalRequest": {
-						"method": "GET",
-						"header": [],
 						"url": {
-							"raw": "https://jsonplaceholder.typicode.com/todos/1",
 							"protocol": "https",
+							"path": [
+								"todos",
+								"1"
+							],
 							"host": [
 								"jsonplaceholder",
 								"typicode",
 								"com"
 							],
-							"path": [
-								"todos",
-								"1"
-							]
-						}
+							"query": [],
+							"variable": []
+						},
+						"method": "GET"
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": "json",
 					"header": [
 						{
 							"key": "Date",
@@ -174,68 +199,79 @@
 							"value": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
 						}
 					],
-					"cookie": [],
-					"body": "{\n    \"userId\": 1,\n    \"id\": 1,\n    \"title\": \"delectus aut autem\",\n    \"completed\": false\n}"
+					"body": "{\n    \"userId\": 1,\n    \"id\": 1,\n    \"title\": \"delectus aut autem\",\n    \"completed\": false\n}",
+					"cookie": []
 				}
-			]
-		},
-		{
-			"name": "Big JSON",
+			],
 			"event": [
 				{
 					"listen": "test",
 					"script": {
+						"id": "5bdecb28-19a6-4d65-ac63-89157897bcb4",
+						"type": "text/javascript",
 						"exec": [
-							""
-						],
-						"type": "text/javascript"
+							"//Begin of auto generated code by Jackal",
+							"pm.test(\"Status code is 200 for request: Get Note 1\", function () {pm.response.to.have.status(200);});",
+							"//End of auto generated code by Jackal",
+							"//Begin of auto generated code by Jackal",
+							"pm.test(\"Status code is 200 for request: Get Note 1\", function () {pm.response.to.have.status(200);});",
+							"//End of auto generated code by Jackal"
+						]
 					}
 				}
-			],
+			]
+		},
+		{
+			"id": "07776eb7-32ed-494d-b787-6403f23681d9",
+			"name": "Big JSON",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"description": {
+					"content": "\n## Url\n`GET`  `h://opensource/Spry/data/json/object-02.js`\n\n",
+					"type": "text/markdown"
+				},
 				"url": {
-					"raw": "https://opensource.adobe.com/Spry/data/json/object-02.js",
 					"protocol": "https",
-					"host": [
-						"opensource",
-						"adobe",
-						"com"
-					],
 					"path": [
 						"Spry",
 						"data",
 						"json",
 						"object-02.js"
-					]
-				}
+					],
+					"host": [
+						"opensource",
+						"adobe",
+						"com"
+					],
+					"query": [],
+					"variable": []
+				},
+				"method": "GET"
 			},
 			"response": [
 				{
+					"id": "86243842-cdbc-48c4-8196-8a965c7a5c9d",
 					"name": "Big JSON",
 					"originalRequest": {
-						"method": "GET",
-						"header": [],
 						"url": {
-							"raw": "https://opensource.adobe.com/Spry/data/json/object-02.js",
 							"protocol": "https",
-							"host": [
-								"opensource",
-								"adobe",
-								"com"
-							],
 							"path": [
 								"Spry",
 								"data",
 								"json",
 								"object-02.js"
-							]
-						}
+							],
+							"host": [
+								"opensource",
+								"adobe",
+								"com"
+							],
+							"query": [],
+							"variable": []
+						},
+						"method": "GET"
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": "script",
 					"header": [
 						{
 							"key": "Connection",
@@ -334,59 +370,82 @@
 							"value": "Accept-Encoding"
 						}
 					],
-					"cookie": [],
-					"body": "{\r\n\t\"id\": \"0001\",\r\n\t\"type\": \"donut\",\r\n\t\"name\": \"Cake\",\r\n\t\"ppu\": 0.55,\r\n\t\"batters\":\r\n\t\t{\r\n\t\t\t\"batter\":\r\n\t\t\t\t[\r\n\t\t\t\t\t{ \"id\": \"1001\", \"type\": \"Regular\" },\r\n\t\t\t\t\t{ \"id\": \"1002\", \"type\": \"Chocolate\" },\r\n\t\t\t\t\t{ \"id\": \"1003\", \"type\": \"Blueberry\" },\r\n\t\t\t\t\t{ \"id\": \"1004\", \"type\": \"Devil's Food\" }\r\n\t\t\t\t]\r\n\t\t},\r\n\t\"topping\":\r\n\t\t[\r\n\t\t\t{ \"id\": \"5001\", \"type\": \"None\" },\r\n\t\t\t{ \"id\": \"5002\", \"type\": \"Glazed\" },\r\n\t\t\t{ \"id\": \"5005\", \"type\": \"Sugar\" },\r\n\t\t\t{ \"id\": \"5007\", \"type\": \"Powdered Sugar\" },\r\n\t\t\t{ \"id\": \"5006\", \"type\": \"Chocolate with Sprinkles\" },\r\n\t\t\t{ \"id\": \"5003\", \"type\": \"Chocolate\" },\r\n\t\t\t{ \"id\": \"5004\", \"type\": \"Maple\" }\r\n\t\t]\r\n}\r\n"
+					"body": "{\r\n\t\"id\": \"0001\",\r\n\t\"type\": \"donut\",\r\n\t\"name\": \"Cake\",\r\n\t\"ppu\": 0.55,\r\n\t\"batters\":\r\n\t\t{\r\n\t\t\t\"batter\":\r\n\t\t\t\t[\r\n\t\t\t\t\t{ \"id\": \"1001\", \"type\": \"Regular\" },\r\n\t\t\t\t\t{ \"id\": \"1002\", \"type\": \"Chocolate\" },\r\n\t\t\t\t\t{ \"id\": \"1003\", \"type\": \"Blueberry\" },\r\n\t\t\t\t\t{ \"id\": \"1004\", \"type\": \"Devil's Food\" }\r\n\t\t\t\t]\r\n\t\t},\r\n\t\"topping\":\r\n\t\t[\r\n\t\t\t{ \"id\": \"5001\", \"type\": \"None\" },\r\n\t\t\t{ \"id\": \"5002\", \"type\": \"Glazed\" },\r\n\t\t\t{ \"id\": \"5005\", \"type\": \"Sugar\" },\r\n\t\t\t{ \"id\": \"5007\", \"type\": \"Powdered Sugar\" },\r\n\t\t\t{ \"id\": \"5006\", \"type\": \"Chocolate with Sprinkles\" },\r\n\t\t\t{ \"id\": \"5003\", \"type\": \"Chocolate\" },\r\n\t\t\t{ \"id\": \"5004\", \"type\": \"Maple\" }\r\n\t\t]\r\n}\r\n",
+					"cookie": []
+				}
+			],
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1063ee09-792e-42aa-9e0c-f74fbf5fb733",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"//Begin of auto generated code by Jackal",
+							"pm.test(\"Status code is 200 for request: Big JSON\", function () {pm.response.to.have.status(200);});",
+							"//End of auto generated code by Jackal",
+							"//Begin of auto generated code by Jackal",
+							"pm.test(\"Status code is 200 for request: Big JSON\", function () {pm.response.to.have.status(200);});",
+							"//End of auto generated code by Jackal"
+						]
+					}
 				}
 			]
 		},
 		{
+			"id": "60493d76-b6c1-4f3a-854e-fff942de5009",
 			"name": "Xml request",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"description": {
+					"content": "\n## Url\n`GET`  `h://www/wp-content/uploads/2020/03/Sample-XML-Files.xml`\n\n",
+					"type": "text/markdown"
+				},
 				"url": {
-					"raw": "https://www.learningcontainer.com/wp-content/uploads/2020/03/Sample-XML-Files.xml",
 					"protocol": "https",
-					"host": [
-						"www",
-						"learningcontainer",
-						"com"
-					],
 					"path": [
 						"wp-content",
 						"uploads",
 						"2020",
 						"03",
 						"Sample-XML-Files.xml"
-					]
-				}
+					],
+					"host": [
+						"www",
+						"learningcontainer",
+						"com"
+					],
+					"query": [],
+					"variable": []
+				},
+				"method": "GET"
 			},
 			"response": [
 				{
+					"id": "59fa3690-37d2-4a73-b6ef-45b1b1fb5d05",
 					"name": "Xml request",
 					"originalRequest": {
-						"method": "GET",
-						"header": [],
 						"url": {
-							"raw": "https://www.learningcontainer.com/wp-content/uploads/2020/03/Sample-XML-Files.xml",
 							"protocol": "https",
-							"host": [
-								"www",
-								"learningcontainer",
-								"com"
-							],
 							"path": [
 								"wp-content",
 								"uploads",
 								"2020",
 								"03",
 								"Sample-XML-Files.xml"
-							]
-						}
+							],
+							"host": [
+								"www",
+								"learningcontainer",
+								"com"
+							],
+							"query": [],
+							"variable": []
+						},
+						"method": "GET"
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": "xml",
 					"header": [
 						{
 							"key": "Date",
@@ -485,10 +544,38 @@
 							"value": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
 						}
 					],
-					"cookie": [],
-					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type='text/xsl'?>\n<CATALOG>\n    <CD>\n        <TITLE>dill diya galla</TITLE>\n        <ARTIST>Arijit singh</ARTIST>\n        <COUNTRY>India</COUNTRY>\n        <COMPANY>tseries</COMPANY>\n        <PRICE>10.90</PRICE>\n        <YEAR>2018</YEAR>\n    </CD>\n    <CD>\n        <TITLE>Saiyara</TITLE>\n        <ARTIST>Atif Aslam</ARTIST>\n        <COUNTRY>Uk</COUNTRY>\n        <COMPANY>Records</COMPANY>\n        <PRICE>9.90</PRICE>\n        <YEAR>2015</YEAR>\n    </CD>\n    <CD>\n        <TITLE>Khairiyat</TITLE>\n        <ARTIST>Sonu nigam</ARTIST>\n        <COUNTRY>india</COUNTRY>\n        <COMPANY>radio</COMPANY>\n        <PRICE>9.90</PRICE>\n        <YEAR>2019</YEAR>\n    </CD>\n    <CD>\n        <TITLE>all is well</TITLE>\n        <ARTIST>Amir Khan</ARTIST>\n        <COUNTRY>pak</COUNTRY>\n        <COMPANY>Virgin records</COMPANY>\n        <PRICE>10.20</PRICE>\n        <YEAR>2012</YEAR>\n    </CD>\n    <CD>\n        <TITLE>rockstar</TITLE>\n        <ARTIST>kk</ARTIST>\n        <COUNTRY>india</COUNTRY>\n        <COMPANY>Eros</COMPANY>\n        <PRICE>9.90</PRICE>\n        <YEAR>2014</YEAR>\n    </CD>\n</CATALOG>"
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type='text/xsl'?>\n<CATALOG>\n    <CD>\n        <TITLE>dill diya galla</TITLE>\n        <ARTIST>Arijit singh</ARTIST>\n        <COUNTRY>India</COUNTRY>\n        <COMPANY>tseries</COMPANY>\n        <PRICE>10.90</PRICE>\n        <YEAR>2018</YEAR>\n    </CD>\n    <CD>\n        <TITLE>Saiyara</TITLE>\n        <ARTIST>Atif Aslam</ARTIST>\n        <COUNTRY>Uk</COUNTRY>\n        <COMPANY>Records</COMPANY>\n        <PRICE>9.90</PRICE>\n        <YEAR>2015</YEAR>\n    </CD>\n    <CD>\n        <TITLE>Khairiyat</TITLE>\n        <ARTIST>Sonu nigam</ARTIST>\n        <COUNTRY>india</COUNTRY>\n        <COMPANY>radio</COMPANY>\n        <PRICE>9.90</PRICE>\n        <YEAR>2019</YEAR>\n    </CD>\n    <CD>\n        <TITLE>all is well</TITLE>\n        <ARTIST>Amir Khan</ARTIST>\n        <COUNTRY>pak</COUNTRY>\n        <COMPANY>Virgin records</COMPANY>\n        <PRICE>10.20</PRICE>\n        <YEAR>2012</YEAR>\n    </CD>\n    <CD>\n        <TITLE>rockstar</TITLE>\n        <ARTIST>kk</ARTIST>\n        <COUNTRY>india</COUNTRY>\n        <COMPANY>Eros</COMPANY>\n        <PRICE>9.90</PRICE>\n        <YEAR>2014</YEAR>\n    </CD>\n</CATALOG>",
+					"cookie": []
+				}
+			],
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cc079da8-b075-4d91-ba33-90426867210c",
+						"type": "text/javascript",
+						"exec": [
+							"//Begin of auto generated code by Jackal",
+							"pm.test(\"Status code is 200 for request: Xml request\", function () {pm.response.to.have.status(200);});",
+							"//End of auto generated code by Jackal",
+							"//Begin of auto generated code by Jackal",
+							"pm.test(\"Status code is 200 for request: Xml request\", function () {pm.response.to.have.status(200);});",
+							"//End of auto generated code by Jackal"
+						]
+					}
 				}
 			]
 		}
-	]
+	],
+	"event": [],
+	"variable": [],
+	"info": {
+		"_postman_id": "d9df1301-201c-407d-b5f0-ab586cadff41",
+		"name": "Smart Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"description": {
+			"content": "\n## Collection Variables\n\n|Variable name|Variable value|\n|---|---|\n\n",
+			"type": "text/plain"
+		}
+	}
 }

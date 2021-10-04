@@ -1,53 +1,58 @@
 {
-	"info": {
-		"_postman_id": "304530eb-35df-43b8-8889-036c3e61944a",
-		"name": "Sample With variables 2",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	"_": {
+		"postman_id": "304530eb-35df-43b8-8889-036c3e61944a"
 	},
 	"item": [
 		{
+			"id": "7b8254dd-8055-4d33-b514-202c82741437",
 			"name": "Group 2",
 			"item": [
 				{
+					"id": "d365be7a-bab6-4aef-be95-5b505b300e69",
 					"name": "Off net",
 					"request": {
-						"method": "GET",
-						"header": [],
 						"url": {
-							"raw": "https://off.net.mk",
 							"protocol": "https",
 							"host": [
 								"off",
 								"net",
 								"mk"
-							]
-						}
+							],
+							"query": [],
+							"variable": []
+						},
+						"method": "GET"
 					},
-					"response": []
+					"response": [],
+					"event": []
 				}
-			]
+			],
+			"event": []
 		},
 		{
+			"id": "188a3b57-990f-4adf-9c48-874e6968630f",
 			"name": "Time",
 			"request": {
-				"method": "GET",
-				"header": [],
 				"url": {
-					"raw": "https://time.mk",
 					"protocol": "https",
 					"host": [
 						"time",
 						"mk"
-					]
-				}
+					],
+					"query": [],
+					"variable": []
+				},
+				"method": "GET"
 			},
-			"response": []
+			"response": [],
+			"event": []
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
+				"id": "f3183cf0-20de-4960-94a2-c0f8d1f9e687",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -57,6 +62,7 @@
 		{
 			"listen": "test",
 			"script": {
+				"id": "adc62989-558f-45fd-802f-72466344923c",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -66,16 +72,24 @@
 	],
 	"variable": [
 		{
-			"key": "username",
-			"value": "testuser"
+			"type": "any",
+			"value": "testuser",
+			"key": "username"
 		},
 		{
-			"key": "password",
-			"value": "no_secret"
+			"type": "any",
+			"value": "no_secret",
+			"key": "password"
 		},
 		{
-			"key": "userId",
-			"value": "9"
+			"type": "any",
+			"value": "9",
+			"key": "userId"
 		}
-	]
+	],
+	"info": {
+		"_postman_id": "304530eb-35df-43b8-8889-036c3e61944a",
+		"name": "Sample With variables 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	}
 }

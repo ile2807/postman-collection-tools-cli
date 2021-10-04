@@ -54,6 +54,8 @@ jackal -h
 |`ged`|Generate MD descriptions in collection|Generates MD descriptions on collection and requests, the description is in MD format and is saved in the output collection file. This command saves the MD descriptions in the collection file. To export these descriptions in a separate MD or PDF file use `emd` or `epdf` respectively. With this command, the `sourceFolder` is not used|
 |`emd`|Generate MD document from collection|Creates summary Markdown document from all the collection descriptions. ***This feature does not automatically generate descriptions***.  It only collects descriptions of all elements of the collection and creates one summary Markdown file. With this command, the `sourceFolder` is not used|
 |`epdf`|Generate PDF document from collection|Creates PDF document from all the collection descriptions. ***This feature does not automatically generate descriptions***. It collects descriptions of all elements of the collection and creates one summary PDF document file. With this command, the `sourceFolder` is not used|
+|`oapi`|Generate [OpenApi](https://swagger.io/specification/) specification|Creates OpenApi yaml document from the `sourceFile`. It uses [postman-to-openapi](https://www.npmjs.com/package/postman-to-openapi) to generate the output. With this command the `sourceFolder` is not used|
+
 > Commands can be combined by executing them one after the other and using the output collection of the first execution as a source collection of the next exection.
 
 Example:

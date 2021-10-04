@@ -1,176 +1,156 @@
 {
-	"info": {
-		"_postman_id": "f535c31f-8d95-41f6-b491-5b53b8daba03",
-		"name": "Sample With duplicates",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	"_": {
+		"postman_id": "f535c31f-8d95-41f6-b491-5b53b8daba03"
 	},
 	"item": [
 		{
+			"id": "2c10191f-bea2-44a0-8b23-4eb00552befd",
 			"name": "Group 1",
+			"description": {
+				"content": "# Test markdown\n## this is just a test\n> Notes here\n```\nCode Here\n```\nAnd some normal text here\n\n### maybe some H3 here as well",
+				"type": "text/plain"
+			},
 			"item": [
 				{
+					"id": "c890737b-1b2b-4fa8-9708-10289728b87a",
 					"name": "Yahoo",
 					"request": {
-						"method": "GET",
-						"header": [],
+						"description": {
+							"content": "# Test markdown\n## this is just a test\n> Notes here\n```\nCode Here\n```\nAnd some normal text here\n\n### maybe some H3 here as well",
+							"type": "text/plain"
+						},
 						"url": {
-							"raw": "https://yahoo.com",
 							"protocol": "https",
 							"host": [
 								"yahoo",
 								"com"
-							]
+							],
+							"query": [],
+							"variable": []
 						},
-						"description": "# Test markdown\n## this is just a test\n> Notes here\n```\nCode Here\n```\nAnd some normal text here\n\n### maybe some H3 here as well"
+						"method": "GET"
 					},
-					"response": []
+					"response": [],
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Begin of auto generated code by Jackal",
+									"pm.test(\"Status code is 200 for request: Yahoo\", function () {pm.response.to.have.status(200);});",
+									"//End of auto generated code by Jackal"
+								],
+								"type": "text/javascript"
+							}
+						}
+					]
 				}
 			],
-			"description": "# Test markdown\n## this is just a test\n> Notes here\n```\nCode Here\n```\nAnd some normal text here\n\n### maybe some H3 here as well"
+			"event": []
 		},
 		{
+			"id": "3f19b715-9346-47af-a934-44d0c6e7fa90",
 			"name": "Group 2",
 			"item": [
 				{
+					"id": "be2307ba-c5f3-4fa4-b2d4-e6a72480bcf6",
 					"name": "Sub Group A",
+					"description": {
+						"content": "# Example-Collection\n\n## An example collection for postdown.\n\n*This example could show you what's the postdown could do.*\n\n## An example API with GET\n\n```\nGET http://0.0.0.0:8000/get/example?example-key=example-value\n```\n\n### An example API.\n\nYou should write the detail about this API.\n\n**It's markdown supported.**\n\n### Request\n\n> \n> **Query**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-key|example-value|example-description|\n> \n> **Header**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-header|example-header-value|example-description|\n> \n\n### Examples:\n\n> \n> **Example: This's a right way to use.**\n> \n> > \n> > ```\n> > GET http://0.0.0.0:8000/get/example?example-key=successful\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|successful|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-header|example-header-value|example-description|\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": \"successful\"\n> > > }\n> > > ```\n> > > \n> > \n> \n> **Example: This's the worry way to use.**\n> \n> > \n> > ```\n> > GET http://0.0.0.0:8000/get/example?example-key=unsuccessful\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|unsuccessful|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-header|example-header-value|example-description|\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": \"unsuccessful\"\n> > > }\n> > > ```\n> > > \n> > \n> \n\n## An example API with POST\n\n```\nPOST http://0.0.0.0:8000/post/example?example-key=example-value\n```\n\n### An example API.\n\nYou should write the detail about this API.\n\n**It's markdown supported.**\n\n### Request\n\n> \n> **Query**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-key|example-value|example-description|\n> \n> **Header**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-header|example-header-value|example-description|\n> \n> **Body**\n> \n> |Key|Value|Type|Description|\n> |---|---|---|---|\n> |example-key|example-value|text|example-description|\n> \n\n### Examples:\n\n> \n> **Example: Successful Request**\n> \n> > \n> > ```\n> > POST http://0.0.0.0:8000/post/example?example-key=example-value\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-header|example-header-value|example-description|\n> > > \n> > > **Body**\n> > > \n> > > |Key|Value|Type|Description|\n> > > |---|---|---|---|\n> > > |example-key|successful|text|example-description|\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": [\n> > >     \"successful\"\n> > >   ]\n> > > }\n> > > ```\n> > > \n> > \n> \n> **Example: Unsuccessful Requests**\n> \n> > \n> > ```\n> > POST http://0.0.0.0:8000/post/example?example-key=example-value\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-header|example-header-value|example-description|\n> > > \n> > > **Body**\n> > > \n> > > |Key|Value|Type|Description|\n> > > |---|---|---|---|\n> > > |example-key|unsuccessful|text|example-description|\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": [\n> > >     \"unsuccessful\"\n> > >   ]\n> > > }\n> > > ```\n> > > \n> > \n> \n\n## An example API with JSON\n\n```\nPOST http://0.0.0.0:8000/json/example?example-key=example-value\n```\n\n### An example API.\n\nYou should write the detail about this API.\n\n**It's markdown supported.**\n\n### Request\n\n> \n> **Query**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-key|example-value|example-description|\n> \n> **Header**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-key|example-value|example-description|\n> |Content-Type|application/json||\n> \n> **Body**\n> \n> ```\n> {\n> \t\"example-key\": \"example-value\"\n> }\n> ```\n> \n\n### Examples:\n\n> \n> **Example: Successful Request**\n> \n> > \n> > ```\n> > POST http://0.0.0.0:8000/json/example?example-key=example-value\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > |Content-Type|application/json||\n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > > \t\"example-key\": \"successful\"\n> > > }\n> > > ```\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": \"successful\"\n> > > }\n> > > ```\n> > > \n> > \n> \n> **Example: Unsuccessful Request**\n> \n> > \n> > ```\n> > POST http://0.0.0.0:8000/json/example?example-key=example-value\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > |Content-Type|application/json||\n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > > \t\"example-key\": \"unsuccessful\"\n> > > }\n> > > ```\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": \"unsuccessful\"\n> > > }\n> > > ```\n> > > \n> > \n>",
+						"type": "text/plain"
+					},
 					"item": [
 						{
+							"id": "b039fff1-b281-401b-9e7d-7696fd754109",
 							"name": "Yahoo",
 							"request": {
-								"method": "GET",
-								"header": [],
 								"url": {
-									"raw": "https://yahoo.com",
 									"protocol": "https",
 									"host": [
 										"yahoo",
 										"com"
-									]
-								}
+									],
+									"query": [],
+									"variable": []
+								},
+								"method": "GET"
 							},
-							"response": []
+							"response": [],
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"//Begin of auto generated code by Jackal",
+											"pm.test(\"Status code is 200 for request: Yahoo\", function () {pm.response.to.have.status(200);});",
+											"//End of auto generated code by Jackal"
+										],
+										"type": "text/javascript"
+									}
+								}
+							]
 						}
 					],
-					"description": "# Example-Collection\n\n## An example collection for postdown.\n\n*This example could show you what's the postdown could do.*\n\n## An example API with GET\n\n```\nGET http://0.0.0.0:8000/get/example?example-key=example-value\n```\n\n### An example API.\n\nYou should write the detail about this API.\n\n**It's markdown supported.**\n\n### Request\n\n> \n> **Query**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-key|example-value|example-description|\n> \n> **Header**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-header|example-header-value|example-description|\n> \n\n### Examples:\n\n> \n> **Example: This's a right way to use.**\n> \n> > \n> > ```\n> > GET http://0.0.0.0:8000/get/example?example-key=successful\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|successful|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-header|example-header-value|example-description|\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": \"successful\"\n> > > }\n> > > ```\n> > > \n> > \n> \n> **Example: This's the worry way to use.**\n> \n> > \n> > ```\n> > GET http://0.0.0.0:8000/get/example?example-key=unsuccessful\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|unsuccessful|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-header|example-header-value|example-description|\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": \"unsuccessful\"\n> > > }\n> > > ```\n> > > \n> > \n> \n\n## An example API with POST\n\n```\nPOST http://0.0.0.0:8000/post/example?example-key=example-value\n```\n\n### An example API.\n\nYou should write the detail about this API.\n\n**It's markdown supported.**\n\n### Request\n\n> \n> **Query**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-key|example-value|example-description|\n> \n> **Header**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-header|example-header-value|example-description|\n> \n> **Body**\n> \n> |Key|Value|Type|Description|\n> |---|---|---|---|\n> |example-key|example-value|text|example-description|\n> \n\n### Examples:\n\n> \n> **Example: Successful Request**\n> \n> > \n> > ```\n> > POST http://0.0.0.0:8000/post/example?example-key=example-value\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-header|example-header-value|example-description|\n> > > \n> > > **Body**\n> > > \n> > > |Key|Value|Type|Description|\n> > > |---|---|---|---|\n> > > |example-key|successful|text|example-description|\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": [\n> > >     \"successful\"\n> > >   ]\n> > > }\n> > > ```\n> > > \n> > \n> \n> **Example: Unsuccessful Requests**\n> \n> > \n> > ```\n> > POST http://0.0.0.0:8000/post/example?example-key=example-value\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-header|example-header-value|example-description|\n> > > \n> > > **Body**\n> > > \n> > > |Key|Value|Type|Description|\n> > > |---|---|---|---|\n> > > |example-key|unsuccessful|text|example-description|\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": [\n> > >     \"unsuccessful\"\n> > >   ]\n> > > }\n> > > ```\n> > > \n> > \n> \n\n## An example API with JSON\n\n```\nPOST http://0.0.0.0:8000/json/example?example-key=example-value\n```\n\n### An example API.\n\nYou should write the detail about this API.\n\n**It's markdown supported.**\n\n### Request\n\n> \n> **Query**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-key|example-value|example-description|\n> \n> **Header**\n> \n> |Key|Value|Description|\n> |---|---|---|\n> |example-key|example-value|example-description|\n> |Content-Type|application/json||\n> \n> **Body**\n> \n> ```\n> {\n> \t\"example-key\": \"example-value\"\n> }\n> ```\n> \n\n### Examples:\n\n> \n> **Example: Successful Request**\n> \n> > \n> > ```\n> > POST http://0.0.0.0:8000/json/example?example-key=example-value\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > |Content-Type|application/json||\n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > > \t\"example-key\": \"successful\"\n> > > }\n> > > ```\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": \"successful\"\n> > > }\n> > > ```\n> > > \n> > \n> \n> **Example: Unsuccessful Request**\n> \n> > \n> > ```\n> > POST http://0.0.0.0:8000/json/example?example-key=example-value\n> > ```\n> > \n> > **Request**\n> > \n> > > \n> > > **Query**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > \n> > > **Header**\n> > > \n> > > |Key|Value|Description|\n> > > |---|---|---|\n> > > |example-key|example-value|example-description|\n> > > |Content-Type|application/json||\n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > > \t\"example-key\": \"unsuccessful\"\n> > > }\n> > > ```\n> > > \n> > \n> > **Response**\n> > \n> > > \n> > > **Body**\n> > > \n> > > ```\n> > > {\n> > >   \"result\": \"unsuccessful\"\n> > > }\n> > > ```\n> > > \n> > \n>"
+					"event": []
 				}
-			]
+			],
+			"event": []
 		},
 		{
+			"id": "3bc55d37-3770-4067-9d74-4fcbd055e3d5",
 			"name": "Group 3",
-			"item": [
-				{
-					"name": "Yahoo",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://yahoo.com",
-							"protocol": "https",
-							"host": [
-								"yahoo",
-								"com"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Yahoo",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://yahoo.com",
-							"protocol": "https",
-							"host": [
-								"yahoo",
-								"com"
-							]
-						}
-					},
-					"response": []
-				}
-			]
+			"item": [],
+			"event": []
 		},
 		{
+			"id": "d392c7b2-5454-415c-b3c8-77be5912028e",
 			"name": "Test",
 			"item": [
 				{
+					"id": "31e71a57-7727-4e30-bd2c-b744fa3039bc",
 					"name": "Google",
 					"request": {
-						"method": "GET",
-						"header": [],
 						"url": {
-							"raw": "https://google.com",
 							"protocol": "https",
 							"host": [
 								"google",
 								"com"
-							]
-						}
+							],
+							"query": [],
+							"variable": []
+						},
+						"method": "GET"
 					},
-					"response": []
+					"response": [],
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//Begin of auto generated code by Jackal",
+									"pm.test(\"Status code is 200 for request: Google\", function () {pm.response.to.have.status(200);});",
+									"//End of auto generated code by Jackal"
+								],
+								"type": "text/javascript"
+							}
+						}
+					]
 				}
-			]
+			],
+			"event": []
 		},
 		{
+			"id": "385e5f1e-16a3-4f9c-9f9c-1e2ec68dc07b",
 			"name": "Test 2",
-			"item": [
-				{
-					"name": "Google",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://google.com",
-							"protocol": "https",
-							"host": [
-								"google",
-								"com"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Google",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://google.com",
-					"protocol": "https",
-					"host": [
-						"google",
-						"com"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Google",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://google.com",
-					"protocol": "https",
-					"host": [
-						"google",
-						"com"
-					]
-				}
-			},
-			"response": []
+			"item": [],
+			"event": []
 		}
 	],
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
+				"id": "b517610b-38a0-41c9-8489-1f75f6504541",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -180,6 +160,7 @@
 		{
 			"listen": "test",
 			"script": {
+				"id": "ce37c485-a5f5-43ef-a742-da9ec068a5e2",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -189,20 +170,29 @@
 	],
 	"variable": [
 		{
-			"key": "host",
-			"value": "http://localhost"
+			"type": "any",
+			"value": "http://localhost",
+			"key": "host"
 		},
 		{
-			"key": "port",
-			"value": "8080"
+			"type": "any",
+			"value": "8080",
+			"key": "port"
 		},
 		{
-			"key": "username",
-			"value": "testuser"
+			"type": "any",
+			"value": "testuser",
+			"key": "username"
 		},
 		{
-			"key": "password",
-			"value": "secret"
+			"type": "any",
+			"value": "secret",
+			"key": "password"
 		}
-	]
+	],
+	"info": {
+		"_postman_id": "f535c31f-8d95-41f6-b491-5b53b8daba03",
+		"name": "Sample With duplicates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	}
 }
