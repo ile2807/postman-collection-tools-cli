@@ -1,3 +1,6 @@
 node_modules
 package-lock.js
 /out.json
+/out.md
+/out.pdf
+/out.yml
